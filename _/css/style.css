@@ -1,0 +1,162 @@
+/* Apply a natural box layout model to all elements: http://paulirish.com/2012/box-sizing-border-box-ftw/ */
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+.chromeframe {position: absolute; top: 0;}
+
+/* Ok, this is where the fun starts.
+-------------------------------------------------------------------------------*/
+
+/* A Linux- and Windows-friendly sans-serif font stack: http://prospects.mhurrell.co.uk/post/updating-the-helvetica-font-stack */
+body {font: 13px Helmet, Freesans, sans-serif;}
+
+/* Using local fonts? Check out Font Squirrel's webfont generator: http://www.fontsquirrel.com/tools/webfont-generator */
+
+/* We like off-black for text. */
+body, select, input, textarea {color: #111;}
+
+a {color: #03f;}
+a:hover {color: #69f;}
+
+/* Custom text-selection colors (remove any text shadows: http://twitter.com/miketaylr/status/12228805301) */
+::-moz-selection{background: #fcd700; color: #fff; text-shadow: none;}
+::selection {background: #fcd700; color: #fff; text-shadow: none;} 
+
+/*	j.mp/webkit-tap-highlight-color */
+a:link {-webkit-tap-highlight-color: #fcd700;} 
+
+ins {background-color: #fcd700; color: #000; text-decoration: none;}
+mark {background-color: #fcd700; color: #000; font-style: italic; font-weight: bold;}
+
+/* Mozilla dosen't style place holders by default */
+input:-moz-placeholder { color:#a9a9a9; }
+textarea:-moz-placeholder { color:#a9a9a9; }
+
+
+
+/* Print styles!
+-------------------------------------------------------------------------------*/
+@media print {
+
+
+
+}
+
+
+/* Media queries!
+-------------------------------------------------------------------------------*/
+
+@media screen and (max-width: 480px) {
+	
+		
+}
+
+/*my styles
+____________________________________________________________________________________*/
+
+	html	{height: 100%; width: 100%; margin: 0 auto; padding: 10px 5pc 0 5px;
+		 /* change the box model to exclude the padding from the calculation of 100% height (IE8+) */
+		 -webkit-box-sizing: border-box;
+		    -moz-box-sizing: border-box;
+		         box-sizing: border-box;
+		 background: #c72;}
+	body	{position: relative; min-height: 100%; min-width: 95%; width: 100%;
+          margin: 0 0 0; padding: 5px 5px 5px 5px;
+		 border: 2px solid white;
+		 -webkit-border-radius: 6px;
+		    -moz-border-radius: 6px;
+		         border-radius: 6px;
+		 /* Safari 4 does not support an inset shadow */
+		 -webkit-box-shadow:       3px 3px 15px rgba(0,0,0,.5);
+		 /* Chrome 5 does, Safari 4 will ignore this declaration */
+		 -webkit-box-shadow: inset 3px 3px 15px rgba(0,0,0,.5);
+		    -moz-box-shadow: inset 3px 3px 15px rgba(0,0,0,.5);
+		         box-shadow: inset 3px 3px 15px rgba(0,0,0,.5);
+		 font: 0.7em/1em "Helvetica Neue", Arial, Helvetica, sans-serif;
+		 color: #245;
+		 background-color: #eee;}
+	
+	h1	{position: absolute; padding: 0; white-space: nowrap;
+		 font: 1.6em "Helvetica Neue" , Arial, Helvetica, sans-serif; text-transform: lowercase;
+		 color: #aaa; text-align: right;
+		 /* CSS transforms, available in Safari/Chrome, Firefox 3.5+, Opera 10.5+ */
+		 -webkit-transform-origin: left top; -webkit-transform: rotate(270deg) translateX(-100%);
+		    -moz-transform-origin: left top;    -moz-transform: rotate(270deg) translateX(-100%);
+		      -o-transform-origin: left top;      -o-transform: rotate(270deg) translateX(-100%);
+		 /* Internet Explorer 8 rotate */
+		 filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);}
+	h1 sup	{vertical-align: top; font-size: 1.6em;}
+	
+	p	{margin: 0 0 0 0; padding: 0;}
+	
+	div		{display: inline;}
+	div:target	{display: block;}
+header, article, aside, footer, div.controls{
+    
+    display: block;
+    width:  100%;
+}
+header,  aside, footer, div.controls, ul.inp{
+    
+    padding-left: 15%
+}
+article p, h2{
+     padding-left: 15%
+}
+footer{
+    
+    background-color: #333;
+    color: #efefef;
+        border-color: #fff;
+    border-width: 2px;
+    		 -webkit-border-radius: 3px;
+		    -moz-border-radius: 3px;
+		         border-radius: 3px;
+    text-align: right;
+    margin-top: 15px;             
+}
+article{
+    min-height: 60em;
+}
+header, p {
+    padding-bottom: 3em;
+}
+nav{
+    padding-top: 1em;
+}
+
+a.nava{
+    font-size: 1.1em;
+    color:  #eee;
+    background-color: #69f;
+    border-color: #000;
+    border-width: 2px;
+    		 -webkit-border-radius: 3px;
+		    -moz-border-radius: 3px;
+		         border-radius: 3px;
+                 padding: 3px;
+   text-decoration: none;
+   padding: 0.5em;        
+}
+
+a.controlbtn{
+    font-size: 1.1em;
+    color:  #eee;
+    background-color: #69f;
+    border-color: #000;
+    border-width: 2px;
+    		 -webkit-border-radius: 3px;
+		    -moz-border-radius: 3px;
+		         border-radius: 3px;
+                 padding: 3px;
+   text-decoration: none;
+           
+}
+
+nav ol li{
+    
+    padding: 1em;
+}
+span.strong{
+    font-weight: bold;
+}
+
